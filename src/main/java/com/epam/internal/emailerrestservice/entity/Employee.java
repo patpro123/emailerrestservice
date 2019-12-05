@@ -42,5 +42,12 @@ public class Employee {
 	public void setEmailAddress(String emailAddress) {
 		this.emailAddress = emailAddress;
 	}
+	
+	@Override
+	public String toString() {
+	StringBuffer sb = new StringBuffer();
+	sb.append("The details found are - Name: ").append(this.firstName).append(this.lastName).append(" ").append("Email Address: ").append(this.emailAddress);
+	return sb.toString();
+	}
 
 }

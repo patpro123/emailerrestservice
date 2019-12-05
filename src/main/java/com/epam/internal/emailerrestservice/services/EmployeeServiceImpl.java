@@ -24,10 +24,13 @@ public class EmployeeServiceImpl implements EmployeeService{
 	@Override
 	public Employee getEmployeeDetails(String employeeId) {
 		List<Employee> emp = employeeList.stream().filter(each -> employeeId.equals(each.getEmployeeId())).collect(Collectors.toList());
-		if(emp.isEmpty()) {
-			throw new UserNotFoundException("ERR-001,The Employee is not present in our database.Please try again");
+		if(!emp.isEmpty()) {
+			return emp.get(0);
 		}
-		return emp.get(0);
+		return null;
+		//throw new UserNotFoundException("ERR-001,The Employee is not present in our database.Please try again");
+
+		
 	}
 
 }
