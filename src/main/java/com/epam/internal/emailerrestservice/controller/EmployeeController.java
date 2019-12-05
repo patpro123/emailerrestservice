@@ -60,15 +60,15 @@ public class EmployeeController {
 				email.setToEmailAddress(responseEmp.getEmailAddress());
 				email.setContent("Hi How are you doing?");
 				email.setSubject("Hello from chatbot");
-				String emailStatus = " Email has been sent";
+				/*String emailStatus = " Email has been sent";
 				try {
 					emailService.sendEmail(email);
 				} catch (MessagingException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 					emailStatus = "";
-				}
-				response.setFulfillmentText(responseEmp.toString()+" "+emailStatus);
+				}*/
+				response.setFulfillmentText(responseEmp.toString());
 				response.setSource("");
 			}else {
 				response.setFulfillmentText("Sorry, no information about the employee "+employeeId+" is available.");
