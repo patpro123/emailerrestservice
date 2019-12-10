@@ -83,7 +83,7 @@ public class WhatsAppMessageSenderController {
 
 		if(watsAppConfig.isEnable_messaging()) {
 			Message outMessage = Message.creator( new
-					com.twilio.type.PhoneNumber("whatsapp:"+watsAppConfig.getTo_security()), new
+					com.twilio.type.PhoneNumber("whatsapp:"+toNumber), new
 					com.twilio.type.PhoneNumber("whatsapp:"+watsAppConfig.getFrom_number()),
 					message) .create();
 			System.out.println(" Message to security sent succesfully - id:"+outMessage.
