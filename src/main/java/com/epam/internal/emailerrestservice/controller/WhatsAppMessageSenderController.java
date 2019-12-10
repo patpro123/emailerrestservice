@@ -58,7 +58,7 @@ public class WhatsAppMessageSenderController {
 				sendWatsAppMessage(securityMessage,watsAppConfig.getTo_security());
 
 				//send broadcast message
-				String broadcastMessage = "Please be informed, doors "+doors+" in zone:"+zone+" of "+building+" would be shortly closed owing to a probably security incident. More information to follow";
+				String broadcastMessage = "Please be informed, doors "+doors+" in zone:"+zone+" of "+building+" would be shortly closed owing to a probable security incident. More information to follow";
 				List allBroadcastNumbers = Arrays.asList(watsAppConfig.getTo_broadcast_numbers().split(","));
 
 				allBroadcastNumbers.forEach(each -> sendWatsAppMessage(broadcastMessage,each.toString()));
