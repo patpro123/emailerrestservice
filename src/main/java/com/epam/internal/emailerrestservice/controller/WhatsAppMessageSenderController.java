@@ -53,7 +53,7 @@ public class WhatsAppMessageSenderController {
 				System.out.println(securityMessage);
 				System.out.println(watsAppConfig.toString());
 
-				if(watsAppConfig.isEnable_messaging())Twilio.init(watsAppConfig.getAccount_sid(), watsAppConfig.getAuth_token());
+				if(watsAppConfig.isEnable_messaging())Twilio.init(watsAppConfig.getAccount_sid(), "dc52c784a363c3d9a813e70bf59bdeeb");
 				//send security message
 				sendWatsAppMessage(securityMessage,watsAppConfig.getTo_security());
 
