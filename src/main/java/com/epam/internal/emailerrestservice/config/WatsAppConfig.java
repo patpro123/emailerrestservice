@@ -15,10 +15,23 @@ public class WatsAppConfig {
 	private String auth_token;
 	private String from_number;
 	private String to_security;
+	private boolean enable_messaging;
 	
-	private String to_broadcast_num1;
-	private String to_broadcast_num2;
-	private String to_broadcast_num3;
+	public boolean isEnable_messaging() {
+		return enable_messaging;
+	}
+	public void setEnable_messaging(boolean enable_messaging) {
+		this.enable_messaging = enable_messaging;
+	}
+	@Override
+	public String toString() {
+		return "WatsAppConfig [account_sid=" + account_sid + ", auth_token=" + auth_token + ", from_number="
+				+ from_number + ", to_security=" + to_security + ", enable_messaging=" + enable_messaging
+				+ ", to_broadcast_numbers=" + to_broadcast_numbers + "]";
+	}
+
+	private String to_broadcast_numbers;
+
 	public String getAccount_sid() {
 		return account_sid;
 	}
@@ -43,18 +56,13 @@ public class WatsAppConfig {
 	public void setTo_security(String to_security) {
 		this.to_security = to_security;
 	}
-	public String getTo_broadcast_num1() {
-		return to_broadcast_num1;
+	public String getTo_broadcast_numbers() {
+		return to_broadcast_numbers;
 	}
-	public void setTo_broadcast_num1(String to_broadcast_num1) {
-		this.to_broadcast_num1 = to_broadcast_num1;
+	public void setTo_broadcast_numbers(String to_broadcast_numbers) {
+		this.to_broadcast_numbers = to_broadcast_numbers;
 	}
-	public String getTo_broadcast_num2() {
-		return to_broadcast_num2;
-	}
-	public void setTo_broadcast_num2(String to_broadcast_num2) {
-		this.to_broadcast_num2 = to_broadcast_num2;
-	}
+	
 	
 
 }
